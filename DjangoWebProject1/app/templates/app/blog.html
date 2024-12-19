@@ -1,0 +1,16 @@
+{% extends "app/layout.html" %}
+{% block content %}
+<h2>{{ title }}</h2>
+<div> <img src="../../static/app/content/fyt.png" </div>
+<p><br>  <b> Material </b>  </p>
+<br />
+{% for post in posts %}
+<hr />
+<div class="">
+    <h2> {{post.title }} </h2>
+    <h4> {{post.posted }} </h4>
+    <p> {{post.description }} </p>
+    
+</div>
+{% endfor %}
+{% endblock %}
