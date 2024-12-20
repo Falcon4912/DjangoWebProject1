@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 from pipes import Template
+from dotenv import load_dotenv  
+
 import posixpath
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -25,7 +27,7 @@ SECRET_KEY = '0500f8ea-f767-4659-bcdb-a7120bab6991'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
+load_dotenv()
 ALLOWED_HOSTS = ['*']
 
 # Application references
