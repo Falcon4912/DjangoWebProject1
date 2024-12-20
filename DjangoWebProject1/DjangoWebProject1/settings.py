@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 from pipes import Template
-from dotenv import load_dotenv  
-
 import posixpath
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,7 +25,7 @@ SECRET_KEY = '0500f8ea-f767-4659-bcdb-a7120bab6991'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-load_dotenv()
+
 ALLOWED_HOSTS = ['*']
 
 # Application references
@@ -111,8 +109,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-STATIC_URL = "static/"  
-STATIC_ROOT = BASE_DIR / "static/"  
-
-MEDIA_URL = "media/"  
-MEDIA_ROOT = BASE_DIR / "media/"
+STATIC_URL = '/static/'
+STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
